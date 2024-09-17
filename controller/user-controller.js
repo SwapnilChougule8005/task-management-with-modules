@@ -6,7 +6,7 @@ import jwt  from 'jsonwebtoken';
 import  'dotenv/config'
 
 
-const userService = new UserServices()
+const userService = new UserServices();
 class UserController {
     controller(req, res) {
         const method = req.method;

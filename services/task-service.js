@@ -1,7 +1,7 @@
 import { TaskRepository } from "../repository/task-repository.js";
 let taskRepo = new TaskRepository()
-let nextId = 1;
-
+// let nextId = 1;
+import {nextId} from '../mock-data/task-mock-data.js' 
 export class TaskServices {
     constructor() {
         this.TaskRepository = new TaskRepository();

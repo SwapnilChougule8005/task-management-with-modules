@@ -10,9 +10,8 @@ const server = http.createServer((req, res) => {
 const  {urlSegment,pathname}   = decodeUrl(req,res);
    
     res.writeHead(200, { "content-type": "application/json" });
-    console.log("segments",urlSegment);
+   // console.log("segments",urlSegment);
     
-
     if(urlSegment[0] === "tasks"){
        taskController.controller(req,res)
     }
@@ -27,5 +26,5 @@ const  {urlSegment,pathname}   = decodeUrl(req,res);
 
 
 server.listen( process.env.PORT, () => {
-    console.log(`Server running at http://localhost:${ process.env.PORT}/`);
+    console.log(`Server running at http://localhost:${process.env.PORT}/`);
 });

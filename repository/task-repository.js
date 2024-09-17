@@ -4,7 +4,7 @@ let historyStore = [];
 
 export class TaskRepository { 
     async addTask(task){
-      console.log("pushed",task);
+      //console.log("pushed",task);
       
       tasks.push(task)
     }
@@ -17,14 +17,14 @@ export class TaskRepository {
    async addHistory(historyObject){
       historyStore.push(historyObject)
    }
-   findIndex(id){
-      return tasks.findIndex(task => task.id == id)
+   async findIndex(id){
+      return tasks.findIndex(task => task.id === id)
    }
    getTaskByIndex(taskIndex){
       return tasks[taskIndex]
    }
    getTaskById(id){
-      return tasks.find(task => task.id == id)
+      return tasks.find(task => task.id === id)
    }
    addComment(taskIndex,comment,commentedBy){
       if(Array.isArray(tasks[taskIndex].comments)){

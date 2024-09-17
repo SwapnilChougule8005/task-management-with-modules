@@ -32,3 +32,4 @@ export const studentData = [
 ];
 
 export const tasks = []
+export const nextId = 1
